@@ -20,6 +20,7 @@ Plug 'ton/vim-bufsurf'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'w0rp/ale'
 Plug 'yssl/QFEnter'
+Plug 'othree/xml.vim'
 
 " Editing
 Plug 'tpope/vim-abolish'
@@ -33,6 +34,8 @@ Plug 'jparise/vim-graphql'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'hashivim/vim-terraform'
 
 " Utility
 Plug 'tpope/vim-fugitive'
@@ -132,7 +135,8 @@ let g:qfenter_keymap.hopen=['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_keymap.topen=['<C-t>']
 
 let g:ale_fix_on_save=1
-let g:ale_fixers={'javascript': ['eslint']}
+let g:ale_fixers={'javascript': ['eslint'], 'terraform': ['terraform']}
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters={'html': ['tidy']}
 let g:ale_history_log_output=0
 let g:ale_javascript_eslint_executable='eslint_d'
@@ -150,6 +154,17 @@ let g:yankring_history_dir=$HOME.'/.vim/tmp/yankring/'
 let g:indexed_search_colors=0
 
 let g:javascript_plugin_flow=1
+
+" Enable XML folding
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+
+let g:go_highlight_types=1
+let g:go_highlight_fields=1
+let g:go_highlight_functions=1
+let g:go_highlight_function_calls=1
+let g:go_highlight_operators= 1
+let g:go_highlight_extra_types=1
 
 " Mappings
 " --------------------------------------
