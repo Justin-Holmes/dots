@@ -11,7 +11,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'ervandew/supertab'
 Plug 'henrik/vim-indexed-search'
 Plug 'mhinz/vim-grepper'
-Plug 'mkitt/pigment'
+Plug 'mkitt/pigment', { 'tag': 'v1.0.0' }
 Plug 'mkitt/tabline.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'scrooloose/nerdtree'
@@ -135,9 +135,10 @@ let g:qfenter_keymap.hopen=['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_keymap.topen=['<C-t>']
 
 let g:ale_fix_on_save=1
-let g:ale_fixers={'javascript': ['eslint'], 'terraform': ['terraform']}
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters={'html': ['tidy']}
+let g:ale_fixers={'javascript': ['eslint'], 'terraform': ['terraform'], 'ruby': ['standardrb']}
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 0
+let g:ale_linters={'html': ['tidy'], 'ruby': ['standardrb']}
 let g:ale_history_log_output=0
 let g:ale_javascript_eslint_executable='eslint_d'
 let g:ale_javascript_eslint_use_global=1
@@ -159,6 +160,7 @@ let g:javascript_plugin_flow=1
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
+" Enable Go syntax highlighting
 let g:go_highlight_types=1
 let g:go_highlight_fields=1
 let g:go_highlight_functions=1
