@@ -1,10 +1,9 @@
+[github]
+  user = <USERNAME>
+  email = <EMAIL>
 [alias]
   co = checkout
   st = status
-  empty = commit --allow-empty -m
-  glog = log --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
-  clog = log --pretty='- [x] %h %s'
-  slog = log --pretty='- %h %s (%an)'
 [branch]
   autosetupmerge = always
   autosetuprebase = always
@@ -13,8 +12,8 @@
 [commit]
   gpgsign = true
 [core]
-  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
   trustctime = false
+  excludesfile = ~/.gitignore_global
 [fetch]
   prune = true
 [gpg]
@@ -27,5 +26,3 @@
   autosquash = true
 [rerere]
   enabled = 1
-[include]
-  path = ~/.gitconfig.local
