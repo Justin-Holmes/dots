@@ -1,0 +1,40 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "graphql",
+    "markdown",
+    "typescript",
+    "typescriptreact",
+    "yaml"
+  ],
+  "diagnostic.errorSign": "☠️'",
+  "diagnostic.hintSign": "💡",
+  "diagnostic.infoSign": "ℹ️",
+  "diagnostic.warningSign": "⚠️'",
+  "eslint.autoFixOnSave": true,
+  "list.indicator": "👽",
+  "list.insertMappings": {
+    "<C-t>": "action:tabe",
+    "<C-v>": "action:vsplit",
+    "<C-h>": "action:split",
+    "<C-c>": "do:exit"
+  },
+  "list.normalMappings": {
+    "<C-t>": "action:tabe",
+    "<C-v>": "action:vsplit",
+    "<C-h>": "action:split",
+    "<C-c>": "do:exit"
+  },
+  "npm.binPath": "yarn",
+  "prettier.disableSuccessMessage": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "suggest.enablePreview": true,
+  "tslint.jsEnable": true,
+  "tslint.autoFixOnSave": true
+}
